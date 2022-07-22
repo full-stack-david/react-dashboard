@@ -1,0 +1,26 @@
+$app-header-height: 60px;
+$app-border-radius: 12px;
+$app-box-shadow: 0 20px 20px rgba(#000, 0.08);
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: $body-light-mode-bg-color;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: $body-text-light-mode-color;
+  &:global(.night-mode) {
+    background: $body-dark-mode-bg-color;
+    color: $body-text-dark-mode-color;
+  }
+}
+
+h1,h2,h3,h4{
+  color: $body-text-light-mode-color;
+  :global(.night-mode) &{
+    color: $body-text-dark-mode-color;
+  }
+}

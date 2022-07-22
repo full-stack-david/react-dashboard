@@ -1,0 +1,65 @@
+/******************************************************************************************
+ *
+ *  MAGEMAX - React Admin Dashboard.
+ *  Version: 1.0
+ *  Author: @rex_q - https://themeforest.net/user/rex_q/portfolio.
+ *  Copyright © 2018 RexQ.
+ *  Licensed: Under ThemeForest License.
+ *
+ * ........................................................................................
+ *
+ *  There is more Awesome projects coming soon make sure you follow us to
+ *  know more about our new projects and updates.
+ *
+ *  FOLLOW US:
+ *  Themeforest: https://themeforest.net/user/rex_q
+ *  Twitter: https://twitter.com/vueghost
+ *  Facebook: https://www.facebook.com/Vueghost-113597132644224/
+ *
+ * ::::::::::::::::::::::::::::::[  COMPONENT STYLESHEET  ]::::::::::::::::::::::::::::::::::
+ *
+ *  File name: style.
+ *  File type: SASS StyleSheet.
+ *  Component: PageTitle
+ *
+ ** STYLESHEET OF PageTitle */
+@import "../../Theme/theme";
+
+.pageTitle {
+  padding: 8px*4;
+  margin-top: -8px*3;
+  margin-left: -8px*4;
+  margin-right: -8px*4;
+  line-height: normal;
+
+  padding-bottom: 8px*2;
+  .title {
+    font-weight: 700;
+    font-size: 44px;
+    color: $header-text-light-mode-color;
+    :global(.night-mode) &{
+      color: $header-text-dark-mode-color;
+    }
+  }
+
+  .subTitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba($header-text-light-mode-color, .5);
+    :global(.night-mode) &{
+      color:#6E7580;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    &{
+      .title{
+        font-size: 34px;
+      }
+      .subTitle{
+        margin-top: 8px;
+      }
+      margin: 16px 0;
+      padding: 0;
+    }
+  }
+}

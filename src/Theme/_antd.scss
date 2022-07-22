@@ -1,0 +1,199 @@
+:global{
+  .mt-1 {
+    margin-top: 8px; }
+
+  .mb-1 {
+    margin-bottom: 8px; }
+
+  .mr-1 {
+    margin-right: 8px;
+  }
+
+  .ml-1 {
+    margin-left: 8px; }
+
+  .ml-2 {
+    margin-left: 16px; }
+
+  .mr-2 {
+    margin-right: 16px; }
+
+  .mt-2 {
+    margin-top: 16px; }
+
+  .mb-2 {
+    margin-bottom: 16px; }
+
+
+}
+:global(.ant-timeline){
+  .night-mode & {
+
+    color: $body-text-dark-mode-color !important;
+    *{
+      color: $body-text-dark-mode-color !important;
+    }
+  }
+
+}
+:global(.ant-collapse){
+  .night-mode & {
+    background: transparent;
+    color: $body-text-dark-mode-color !important;
+    *{
+      color: $body-text-dark-mode-color !important;
+    }
+
+    .ant-collapse-content-box,.ant-collapse-content-active{
+      background: transparent !important;
+    }
+  }
+}
+
+:global(.ant-tabs){
+  .night-mode & {
+    color: $body-text-dark-mode-color !important;  background: $widget-dark-mode-bg-color;
+    *{
+      color: $body-text-dark-mode-color !important;  background: $widget-dark-mode-bg-color;
+
+    }
+
+
+
+  }
+}
+:global(.ant-pagination){
+  .night-mode & {
+    background: $widget-dark-mode-bg-color;
+    color: $body-text-dark-mode-color !important;
+    *{
+      background: $widget-dark-mode-bg-color;
+      color: $body-text-dark-mode-color !important;
+    }
+  }
+}
+:global(.ant-list-item) {
+
+  .night-mode & {
+    border-bottom: 1px solid $border-dark-mode-color !important;
+  }
+  .ant-list-item-meta-title, .ant-list-item-action, .ant-list-footer {
+    color: $body-text-light-mode-color;
+    .night-mode & {
+      color: $body-text-dark-mode-color !important;
+    }
+
+    a, li {
+      color: $body-text-light-mode-color;
+      .night-mode & {
+        color: $body-text-dark-mode-color !important;
+      }
+    }
+  }
+
+  .ant-list-item-meta-description,.ant-list-item-content{
+    color: $body-text-light-mode-color;
+    .night-mode & {
+      color: rgba($body-text-dark-mode-color,.7) !important;
+    }
+  }
+}
+
+:global(.ant-progress){
+  margin: 2px !important;
+}
+:global(.ant-btn){
+  border-radius: 40px;
+  margin: 4px;
+}
+
+:global(.ant-input){
+  border-radius: 20px;
+}
+
+:global(.ant-select){
+  border-radius: 20px !important;
+}
+
+:global(.ant-drawer){
+  .night-mode & {
+
+
+
+    color: $body-text-dark-mode-color !important;
+    *,.ant-drawer-content{
+      background: $body-dark-mode-bg-color;
+      color: $body-text-dark-mode-color !important;
+    }
+    .ant-input, .ant-btn, .ant-time-picker-input{
+      background: $body-dark-mode-bg-color;
+      border:none;
+    }
+  }
+}
+:global(.ant-alert){
+  border:none  !important;
+  border-radius: $app-border-radius !important;
+  &.ant-alert-success{
+    background-color: #b7eb8f !important;
+  }
+  &.ant-alert-info{
+    background-color: #91d5ff !important;
+  }
+  &.ant-alert-warning{
+    background-color: #ffe58f !important;
+  }
+  &.ant-alert-error{
+    background-color: red !important;
+  }
+
+
+}
+
+:global(.ant-time-picker-input){
+  border-radius: 20px  !important;
+}
+
+:global(.ant-form){
+  .night-mode & {
+
+    color: $body-text-dark-mode-color !important;
+    *{
+      color: $body-text-dark-mode-color !important;
+    }
+    .ant-input, .ant-btn, .ant-time-picker-input{
+      background: $body-dark-mode-bg-color;
+    border:none;
+    }
+  }
+}
+:global(.ant-card) {
+  border-radius: $app-border-radius !important;
+  box-shadow: $app-box-shadow;
+  margin: 16px 0 !important;
+  .night-mode & {
+    background: $widget-dark-mode-bg-color !important;
+  }
+  border: none !important;
+  .ant-card-cover {
+
+    img {
+      border-radius: $app-border-radius $app-border-radius 0 0 !important;
+    }
+  }
+
+  .ant-card-actions {
+    border-radius: 0 0 $app-border-radius $app-border-radius !important;
+    background-color: $widget-light-mode-bg-color !important;
+    .night-mode & {
+      border-color: $body-dark-mode-bg-color !important;
+      background: $widget-dark-mode-bg-color !important;
+    }
+  }
+}
+
+:global(.d-center) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

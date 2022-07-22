@@ -1,0 +1,56 @@
+/******************************************************************************************
+ *
+ *  MAGEMAX - React Admin Dashboard.
+ *  Version: 1.0
+ *  Author: @rex_q - https://themeforest.net/user/rex_q/portfolio.
+ *  Copyright © 2018 RexQ.
+ *  Licensed: Under ThemeForest License.
+ *
+ * ........................................................................................
+ *
+ *  There is more Awesome projects coming soon make sure you follow us to
+ *  know more about our new projects and updates.
+ *
+ *  FOLLOW US:
+ *  Themeforest: https://themeforest.net/user/rex_q
+ *  Twitter: https://twitter.com/vueghost
+ *  Facebook: https://www.facebook.com/Vueghost-113597132644224/
+ *
+ * ::::::::::::::::::::::::::::::[  COMPONENT STYLESHEET ]::::::::::::::::::::::::::::::::::
+ *
+ *  File name: Login.
+ *  File type: SASS StyleSheet.
+ *  Component: LoginPage
+ *
+ ** STYLESHEET OF LoginPage */
+
+@import "../../Theme/theme";
+.loginPage {
+  position: absolute;
+  align-items: center;
+
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-size: contain;
+  background: $body-dark-mode-bg-color url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTkzLjggMjM2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6dXJsKCNsaW5lYXItZ3JhZGllbnQpO30uY2xzLTJ7ZmlsbDp1cmwoI2xpbmVhci1ncmFkaWVudC0yKTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjcyNi4yOSIgeTE9IjE0MTEuMyIgeDI9IjYwOC42OCIgeTI9IjE1MjguOTMiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcxLjI1IC05NzAuMDYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBkNTk0Ii8+PHN0b3Agb2Zmc2V0PSIwLjEzIiBzdG9wLWNvbG9yPSIjMDRjZDlkIi8+PHN0b3Agb2Zmc2V0PSIwLjM1IiBzdG9wLWNvbG9yPSIjMTBiN2I3Ii8+PHN0b3Agb2Zmc2V0PSIwLjU3IiBzdG9wLWNvbG9yPSIjMWU5Y2Q3Ii8+PHN0b3Agb2Zmc2V0PSIwLjg3IiBzdG9wLWNvbG9yPSIjMDA3NWJlIi8+PHN0b3Agb2Zmc2V0PSIwLjk5IiBzdG9wLWNvbG9yPSIjNGIwMGQ0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudC0yIiB4MT0iNTM0LjA3IiB5MT0iMTQxMC44NiIgeDI9IjQxNS41NiIgeTI9IjE1MjkuMzYiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz48L2RlZnM+PHRpdGxlPmNvbG9yLWxvZ288L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTU5NS44LDM4MnMtNzQuNyw3My40LTkwLDEwNGMtNSwxMC01LDE2LDAsMjcsMTQuNCwzMS42LDkxLDEwNSw5MSwxMDVzLTYzLjYtODAuNy04MC4yLTExMi40YTEzLjQ3LDEzLjQ3LDAsMCwxLS4yLTEwLjZDNTMwLjQsNDY0LjgsNTk1LjgsMzgyLDU5NS44LDM4MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MDMgLTM4MikiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik00MDQsMzgyczc0LjcsNzMuNCw5MCwxMDRjNSwxMCw1LDE2LDAsMjctMTQuNCwzMS42LTkxLDEwNS05MSwxMDVzNjMuNi04MC43LDgwLjItMTEyLjRhMTMuNDcsMTMuNDcsMCwwLDAsLjItMTAuNkM0NjkuNCw0NjQuOCw0MDQsMzgyLDQwNCwzODJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDAzIC0zODIpIi8+PC9zdmc+)  no-repeat;
+  background-size: 100%;
+
+  .night-mode &{
+    color: #fff;
+  }
+
+
+  .loginWidget{
+    position: absolute;
+    top: 50%;
+    border-radius: $app-border-radius*2;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 400px;
+    z-index: 1000;
+  }
+}

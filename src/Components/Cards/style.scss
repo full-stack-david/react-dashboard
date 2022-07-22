@@ -1,0 +1,167 @@
+/******************************************************************************************
+ *
+ *  MAGEMAX - React Admin Dashboard.
+ *  Version: 1.0
+ *  Author: @rex_q - https://themeforest.net/user/rex_q/portfolio.
+ *  Copyright © 2018 RexQ.
+ *  Licensed: Under ThemeForest License.
+ *
+ * ........................................................................................
+ *
+ *  There is more Awesome projects coming soon make sure you follow us to
+ *  know more about our new projects and updates.
+ *
+ *  FOLLOW US:
+ *  Themeforest: https://themeforest.net/user/rex_q
+ *  Twitter: https://twitter.com/vueghost
+ *  Facebook: https://www.facebook.com/Vueghost-113597132644224/
+ *
+ * ::::::::::::::::::::::::::::::[  COMPONENT STYLESHEET   ]::::::::::::::::::::::::::::::::::
+ *
+ *  File name: style.
+ *  File type: SASS StyleSheet.
+ *  Component: Cards
+ *
+ ** STYLESHEET OF Cards */
+@import "../../Theme/theme";
+
+.infoCard {
+  width: 100%;
+  border-radius: $app-border-radius;
+  margin: 8px*2 0;
+  min-height: 120px;
+  height: auto;
+  background: $widget-light-mode-bg-color;
+  box-shadow: $app-box-shadow;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  .cardBody{
+    padding: 8px*2 8px*2;
+
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    .content{
+      box-sizing: border-box;
+      flex: 1;
+      padding-left: 8px*2;
+      padding-right: 8px*2;
+      .value,.title{
+        width: 100%;
+        line-height: normal;
+        max-width: calc(100% - 24px);
+
+        word-wrap: break-word;
+        box-sizing: border-box;
+
+      }
+      .value {
+        font-size: 40px;
+        font-weight: 200;
+      }
+      .title {
+        font-size: 14px;
+        font-weight: 400;
+        @media (min-width: 1000px) and (max-width: 1100px) {
+          &{
+            font-size: 11px;
+          }
+
+        }
+      }
+
+
+    }
+
+
+    .leftIcon {
+      [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+        font-family: Flaticon;
+        font-size: 40px;
+        font-style: normal;
+        margin: 0;
+
+      }
+      :global(.icon){
+        font-size: 40px;
+      }
+    }
+
+    .bgIcon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: .1;
+      font-size: 120px;
+      overflow: hidden;
+      height: 110px;
+      border-radius: 0 0 $app-border-radius 0;
+      [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+        font-family: Flaticon;
+        font-size: 120px;
+        font-style: normal;
+
+      }
+      .icon{
+        font-size: 120px;
+      }
+    }
+  }
+  :global(.night-mode) & {
+    background: $widget-dark-mode-bg-color;
+    box-shadow: none;
+  }
+  small{
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 8px;
+  }
+
+
+
+
+
+}
+
+.userContactCardMini {
+  padding: 8px 8px*2;
+  display: flex;
+  align-items: center;
+
+  .online,.offline{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 6px;
+
+  }
+
+  .online{
+    background: #48a23f;
+  }
+
+  .offline{
+    background: red;
+  }
+  .content {
+    margin-left: 16px;
+    flex: 1;
+    .userName {
+      font-size: 14px;
+      color: $header-text-light-mode-color;
+      :global(.night-mode) & {
+        color: $header-text-dark-mode-color;
+      }
+    }
+    .userInfo {
+      font-size: 11px;
+      color: rgba($header-text-light-mode-color, .4);
+      :global(.night-mode) & {
+        color: rgba($header-text-dark-mode-color, .4);
+      }
+    }
+  }
+}

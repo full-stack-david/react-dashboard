@@ -1,0 +1,254 @@
+/******************************************************************************************
+ *
+ *  MAGEMAX - React Admin Dashboard.
+ *  Version: 1.0
+ *  Author: @rex_q - https://themeforest.net/user/rex_q/portfolio.
+ *  Copyright © 2018 RexQ.
+ *  Licensed: Under ThemeForest License.
+ *
+ * ........................................................................................
+ *
+ *  There is more Awesome projects coming soon make sure you follow us to
+ *  know more about our new projects and updates.
+ *
+ *  FOLLOW US:
+ *  Themeforest: https://themeforest.net/user/rex_q
+ *  Twitter: https://twitter.com/vueghost
+ *  Facebook: https://www.facebook.com/Vueghost-113597132644224/
+ *
+ * ::::::::::::::::::::::::::::::[  COMPONENT STYLESHEET  ]::::::::::::::::::::::::::::::::::
+ *
+ *  File name: Style.
+ *  File type: SASS StyleSheet.
+ *  Component: AppLayout
+ *
+ ** STYLESHEET OF AppLayout */
+@import "../../Theme/theme";
+
+.appLayout {
+  position: absolute;
+  top: $app-header-height;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - #{$app-header-height});
+}
+
+.appLayoutHeader {
+  height: $app-header-height;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px*4;
+  background: $widget-light-mode-bg-color;
+  display: flex;
+  position: fixed;
+  left: 0;
+  color: #333;
+  top: 0;
+  z-index: 2000;
+  box-shadow: 0 1px 0 $border-light-mode-color;
+  :global(.night-mode) & {
+    color: #d7dae0;
+    background: linear-gradient(to top, #252830 10%, #373d47 100%);
+    box-shadow: 0 1px 0 $border-dark-mode-color;
+  }
+
+  @include transition(250ms);
+
+  &.shadow {
+    box-shadow: $app-box-shadow;
+    :global(.night-mode) & {
+      box-shadow: 0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.4);
+      border-bottom: none;
+    }
+  }
+}
+
+.appLayoutSideBar {
+  width: 0;
+
+
+  position: relative;
+  height: 100%;
+  background: $widget-light-mode-bg-color;
+  @include transition(250ms);
+  :global(.night-mode) & {
+    background: $widget-dark-mode-bg-color;
+  }
+  .container {
+    padding: 8px*4 0;
+  }
+  &.show{
+    width: 24 * 8px;
+    transform: translateX(0%);
+  }
+  &.left {
+    &.show{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    opacity: 0;
+    transform: translateX(-100%);
+    border-right: 1px solid $border-light-mode-color;
+    :global(.night-mode) & {
+      border-right: 1px solid $border-dark-mode-color;
+    }
+  }
+
+  &.right {
+    &.show{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    opacity: 0;
+    border-left: 1px solid $border-light-mode-color;
+    :global(.night-mode) & {
+      border-left: 1px solid $border-dark-mode-color;
+    }
+  }
+}
+
+.appLayoutMainContent {
+  width: 100%;
+  flex: 1;
+  height: 100%;
+
+  .appLayoutContainer {
+    padding: 8px*3 8px*4;
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+  }
+}
+
+.appLayoutSideBarMenuIcon{
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3*8px;
+  margin-right:3*8px;
+  cursor: pointer;
+  opacity: .5;
+  @media (min-width: 481px) and (max-width: 767px) {
+    &{
+      margin-left: 0;
+    }
+
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    &{
+      margin-left: 0;
+    }
+  }
+  .line {
+    height: 2px;
+    width: 30px;
+
+    background: $header-text-light-mode-color;
+    :global(.night-mode) &{
+      background: $header-text-dark-mode-color;
+    }
+    margin: 2px 0;
+    margin-right: 5px;
+    border-radius:4px;
+    &:nth-child(1){
+      margin-left: 10px;
+    }
+    &:nth-child(2){
+      margin-left: -10px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .appLayoutSideBar {
+    position: fixed;
+    .container {
+      padding: 8px*2 0;
+      margin-bottom: 60px;
+    }
+    &.left {
+      left: 0px;
+      z-index: 1000;
+      box-shadow: 20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+    &.right {
+      right: 0px;
+      z-index: 1000;
+      box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .appLayoutSideBar {
+    position: fixed;
+    .container {
+      padding: 8px*2 0;
+      margin-bottom: 60px;
+    }
+    &.left {
+      left: 0px;
+      z-index: 1000;
+      box-shadow: 20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+    &.right {
+      right: 0px;
+      z-index: 1000;
+      box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .appLayoutSideBar {
+    position: fixed;
+    .container {
+      padding: 8px*2 0;
+      margin-bottom: 60px;
+    }
+    &.left {
+      left: 0px;
+      z-index: 1000;
+      box-shadow: 20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+    &.right {
+      right: 0px;
+      z-index: 1000;
+      box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .appLayoutSideBar {
+    position: fixed;
+    .container {
+      padding: 8px*2 0;
+      margin-bottom: 60px;
+    }
+    &.left {
+      left: 0px;
+      z-index: 1000;
+      box-shadow: 20px 0 20px rgba(0,0,0,0.1);
+    }
+    &.right {
+      right: 0px;
+      z-index: 1000;
+      box-shadow: -20px 0 20px rgba(0,0,0,0.1);
+    }
+  }
+  .appLayoutMainContent {
+    width: 100%;
+    flex: 1;
+    height: 100%;
+
+    .appLayoutContainer {
+      padding: 8px*2;
+    }
+  }
+
+}

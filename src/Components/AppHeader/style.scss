@@ -1,0 +1,116 @@
+/******************************************************************************************
+ *
+ *  MAGEMAX - React Admin Dashboard.
+ *  Version: 1.0
+ *  Author: @rex_q - https://themeforest.net/user/rex_q/portfolio.
+ *  Copyright © 2018 RexQ.
+ *  Licensed: Under ThemeForest License.
+ *
+ * ........................................................................................
+ *
+ *  There is more Awesome projects coming soon make sure you follow us to
+ *  know more about our new projects and updates.
+ *
+ *  FOLLOW US:
+ *  Themeforest: https://themeforest.net/user/rex_q
+ *  Twitter: https://twitter.com/vueghost
+ *  Facebook: https://www.facebook.com/Vueghost-113597132644224/
+ *
+ * ::::::::::::::::::::::::::::::[  COMPONENT STYLESHEET  ]::::::::::::::::::::::::::::::::::
+ *
+ *  File name: style.
+ *  File type: SASS StyleSheet.
+ *  Component: AppHeader
+ *
+ ** STYLESHEET OF AppHeader */
+
+@import "../../Theme/theme";
+.appHeader {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .section{
+    display: flex;
+    align-items: center;
+    &:nth-child(2){
+      flex: 1;
+    }
+
+    .iconInSection{
+      margin: 0 8px;
+      :global(.icon){
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
+  }
+  .brandLogo, .brandLogoNightMode{
+    margin-right: 16px;
+    @media (min-width: 481px) and (max-width: 767px) {
+      &{
+        display: none;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      &{
+        display: none;
+      }
+    }
+  }
+
+  .brandLogoNightMode{
+    display: none;
+  }
+  :global(.night-mode) &{
+    .brandLogo{
+      display: none;
+    }
+    .brandLogoNightMode{
+      display: block;
+      @media (min-width: 320px) and (max-width: 480px) {
+        &{
+          display: none;
+        }
+      }
+
+    }
+  }
+  .searchInput{
+    width: 300px;
+    :global(.ant-input){
+      border-radius: 10px;
+      outline: none;
+      background: #f4f4f4;
+      border-color: #f4f4f4;
+
+      &:hover{
+        border-color: $border-light-mode-color;
+      }
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+      :global(.night-mode) & {
+        background: #4D5360;
+        color: #fff;
+        border-color: #4D5360;
+      }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      &{
+        display: none;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      &{
+        display: none;
+      }
+    }
+
+  }
+}
